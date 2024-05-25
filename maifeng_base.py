@@ -140,10 +140,7 @@ class GameAutoBase(GameAutoInit):
             if time.time() - st > 15 * 60:
                 print("旅团调查，超过15分钟，自动退出")
                 break
-            p = self.find_pic("new_duiwu_01.png")
-            if p[0] == -1:
-                break
-            p = self.find_pic("kaiqi_02.png|kaiqi_01.png|new_fangqi_01.png")
+            p = self.find_pic("kaiqi_02.png|kaiqi_01.png|new_kaiqi_01.png|new_fangqi_01.png")
             if p[0] > 0:
                 self.点击(p, 3.5)
                 self.notice_push("旅团调查结束，开宝箱/放弃")
