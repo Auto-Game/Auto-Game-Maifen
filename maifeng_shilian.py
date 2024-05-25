@@ -290,6 +290,8 @@ class GameAutoShiLian(GameAutoInit):
 
 if __name__ == '__main__':
     game = GameAutoShiLian()
+    # game.截屏保存()
+
     while True:
         game.试炼()
         print("休息2分钟")
