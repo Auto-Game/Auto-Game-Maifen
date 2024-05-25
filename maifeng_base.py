@@ -7,19 +7,13 @@
 '''
 import time
 
-from helper_functions import GameAutoBase
-
-scale = 1  # 电脑的缩放比例
-radius = 5  # 随机半径
-x_coor = 10  # 窗口位置
-y_coor = 10  # 窗口位置
-pic_path = "maifeng_pic"  # 图片路径
+from helper_functions import GameAutoInit
 
 
-class GameAuto(GameAutoBase):
+class GameAutoBase(GameAutoInit):
     def 挂机(self):
         memu = [(119, 900), (195, 900), (269, 900), (346, 900), (421, 900)]
-        n = 1
+        run_ct = 1 # 当前执行次数
         while True:
             # 417, 803  进阶   68, 902  返回  497, 575 首领
             self.点击(memu[2], 5)
@@ -85,11 +79,11 @@ class GameAuto(GameAutoBase):
 
             print("休息1分钟")
             time.sleep(60)
-            n += 1
+            run_ct += 1
 
 
 if __name__ == '__main__':
-    game = GameAuto()
+    game = GameAutoBase()
     game.挂机()
     # print(game.find_pic("shouling_01.png"))
     # game.点击((269, 900), 5.5)

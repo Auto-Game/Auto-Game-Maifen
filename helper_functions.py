@@ -40,7 +40,7 @@ y_coor = 10  # 窗口位置
 pic_path = "maifeng_pic"  # 图片路径
 
 
-class GameAutoBase:
+class GameAutoInit:
     """
     @description  :自动点击类，包含后台截图、图像匹配
     ---------

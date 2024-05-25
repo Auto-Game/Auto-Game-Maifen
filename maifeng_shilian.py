@@ -7,16 +7,10 @@
 '''
 import time
 
-from helper_functions import GameAutoBase
-
-scale = 1  # 电脑的缩放比例
-radius = 5  # 随机半径
-x_coor = 10  # 窗口位置
-y_coor = 10  # 窗口位置
-pic_path = "maifeng_pic"  # 图片路径
+from helper_functions import GameAutoInit
 
 
-class GameAuto(GameAutoBase):
+class GameAutoShiLian(GameAutoInit):
     # 匹配超时重新匹配
     def 超时重试(self):
         p = self.find_pic("new_chaoshi_01.png")
@@ -299,7 +293,7 @@ class GameAuto(GameAutoBase):
 
 
 if __name__ == '__main__':
-    game = GameAuto()
+    game = GameAutoShiLian()
     while True:
         game.试炼()
         print("休息2分钟")
