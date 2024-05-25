@@ -12,10 +12,11 @@ from maifeng_shilian import GameAutoShiLian
 
 
 if __name__ == '__main__':
-    game = GameAutoBase()
-    game.挂机()
+    gameBase = GameAutoBase()
+    gameSL = GameAutoShiLian()
 
-    game = GameAutoShiLian()
-    game.试炼()
-    print("休息2分钟")
-    time.sleep(2 * 60)
+    while True:
+        gameBase.挂机()
+        gameSL.试炼()
+        print("休息2分钟")
+        time.sleep(2 * 60)

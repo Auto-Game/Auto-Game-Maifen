@@ -701,3 +701,8 @@ class GameAutoInit:
     def test_ocr(self, path):
         result = PaddleOCR(det=True, rec=True).ocr(path)
         print(result)
+
+    def notice_push(self, msg=""):
+        print(msg)
+        server_push_link = "http://sctapi.ftqq.com/" + self.server_push_token + ".send?title=麦芬！" + msg
+        r = self.s.get(server_push_link)

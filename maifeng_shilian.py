@@ -280,16 +280,12 @@ class GameAutoShiLian(GameAutoInit):
         flag = False
         tzcs = 0
 
-        self.notice_push("试炼开始")
+        self.notice_push("试炼任务开始")
         self.秘境()
         self.绝境()
         self.恶龙()
         self.梦魇()
-
-    def notice_push(self, msg=""):
-        print(msg)
-        server_push_link = "http://sctapi.ftqq.com/" + self.server_push_token + ".send?title=麦芬！" + msg
-        r = self.s.get(server_push_link)
+        self.notice_push("试炼任务结束")
 
 
 if __name__ == '__main__':

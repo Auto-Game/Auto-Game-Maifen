@@ -16,11 +16,12 @@ class GameAutoBase(GameAutoInit):
         run_ct = 1 # 当前执行次数
         while True:
             if run_ct == 3:
+                self.notice_push("挂机任务结束")
                 break
             # 417, 803  进阶   68, 902  返回  497, 575 首领
             self.点击(memu[2], 5)
             if self.find_pic("shouling_01.png")[0] > 0:
-                print("挑战首领")
+                self.notice_push("挑战首领")
                 self.点击((497, 575), 5)
                 t = time.time()
                 while True:
@@ -30,7 +31,7 @@ class GameAutoBase(GameAutoInit):
                         break
                     p = self.find_pic("tip_02.png")
                     if p[0] > 0:
-                        print("挑战胜利，挑战下一关")
+                        self.notice_push("挑战胜利，挑战下一关")
                         self.点击((356, 815), 5)
                         break
                     else:
