@@ -15,6 +15,8 @@ class GameAutoBase(GameAutoInit):
         memu = [(119, 900), (195, 900), (269, 900), (346, 900), (421, 900)]
         run_ct = 1 # 当前执行次数
         while True:
+            if run_ct == 3:
+                break
             # 417, 803  进阶   68, 902  返回  497, 575 首领
             self.点击(memu[2], 5)
             if self.find_pic("shouling_01.png")[0] > 0:

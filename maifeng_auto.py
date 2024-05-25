@@ -16,7 +16,6 @@ if __name__ == '__main__':
     game.挂机()
 
     game = GameAutoShiLian()
-    while True:
-        game.试炼()
-        print("休息2分钟")
-        time.sleep(2 * 60)
+    game.试炼()
+    print("休息2分钟")
+    time.sleep(2 * 60)
