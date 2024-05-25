@@ -137,8 +137,11 @@ class GameAutoBase(GameAutoInit):
         st = time.time()
         while True:
             print("旅团调查中，等待3秒")
-            if time.time() - st > 5 * 60:
-                print("旅团调查，超过5分钟，自动退出")
+            if time.time() - st > 15 * 60:
+                print("旅团调查，超过15分钟，自动退出")
+                break
+            p = self.find_pic("new_duiwu_01.png")
+            if p[0] == -1:
                 break
             p = self.find_pic("kaiqi_02.png|kaiqi_01.png|new_fangqi_01.png")
             if p[0] > 0:
